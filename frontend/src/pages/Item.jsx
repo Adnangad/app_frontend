@@ -16,7 +16,7 @@ function Item() {
     const [addedToCart, setAddedToCart] = useState(false);
     const [removedItem, setRemoved] = useState(true);
 
-    const add_url = "http://localhost:5001/add_to_cart";
+    const add_url = "https://backend-proj-kgy6.onrender.com/add_to_cart";
 
     async function logout() {
         sessionStorage.removeItem('user');
@@ -71,7 +71,7 @@ function Item() {
             return;
         }
 
-        const remove_url = `http://localhost:5001/remove_item`;
+        const remove_url = `https://backend-proj-kgy6.onrender.com/remove_item`;
         try {
             const doc = {user: user, cart_id:cart_id}
             const response = await fetch(remove_url, {

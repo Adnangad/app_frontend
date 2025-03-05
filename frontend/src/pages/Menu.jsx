@@ -34,12 +34,12 @@ const Menu = () => {
 
     const user = getUserFromSession();
     console.log(user);
-    const stock_url = `http://localhost:5001/getmenu?page=${page}&category=${category}`;
+    const stock_url = `https://backend-proj-kgy6.onrender.com/getmenu?page=${page}&category=${category}`;
 
     const handleLoginSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('/login', {
+            const response = await fetch('https://backend-proj-kgy6.onrender.com/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password }),

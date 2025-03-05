@@ -26,7 +26,7 @@ function Cart() {
 
         const fetchCart = async () => {
             try {
-                const response = await fetch(`http://localhost:5001/cart/${user.id}`);
+                const response = await fetch(`https://backend-proj-kgy6.onrender.com/cart/${user.id}`);
                 if (!isMounted) return;
 
                 if (response.ok) {
@@ -44,22 +44,7 @@ function Cart() {
         return () => { isMounted = false; };
     }, [user, navigate]);
 
-    const updateCart = async (url, method, body, updateFunc) => {
-        try {
-            const response = await fetch(url, {
-                method,
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(body)
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                updateFunc(data);
-            }
-        } catch (error) {
-            console.error("Error updating cart:", error);
-        }
-    };
+    
     async function removeFromCart(cart_id) {
         if (!user) {
             alert("Please Sign in to continue");
@@ -70,7 +55,7 @@ function Cart() {
             return;
         }
 
-        const remove_url = `http://localhost:5001/remove_item`;
+        const remove_url = `https://backend-proj-kgy6.onrender.com/remove_item`;
         try {
             const doc = {user: user, cart_id:cart_id}
             const response = await fetch(remove_url, {
@@ -100,7 +85,7 @@ function Cart() {
 
         try {
             console.log(stock);
-            const add_url = "http://localhost:5001/add_to_cart";
+            const add_url = "https://backend-proj-kgy6.onrender.com/add_to_cart";
             const response = await fetch(add_url, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

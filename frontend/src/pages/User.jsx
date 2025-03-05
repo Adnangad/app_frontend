@@ -28,7 +28,7 @@ function User() {
     async function deleteAccount(event) {
         event.preventDefault();
         try {
-            const response = await fetch(`http://localhost:5001/delete_user/${user.id}`, {
+            const response = await fetch(`https://backend-proj-kgy6.onrender.com/delete_user/${user.id}`, {
                 method: "DELETE",
                 headers: { 'Content-Type': 'application/json' }
             });
@@ -45,7 +45,7 @@ function User() {
         event.preventDefault();
         try {
             const doc = {user_id: user.id, name:name, password:password, location:location}
-            const response = await fetch(`http://localhost:5001/update_user`, {
+            const response = await fetch(`https://backend-proj-kgy6.onrender.com/update_user`, {
                 method: "PUT",
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(doc)

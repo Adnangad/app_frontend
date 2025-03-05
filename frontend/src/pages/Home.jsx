@@ -40,8 +40,8 @@ function HomePage() {
         
     }
 
-    const login_url = "http://localhost:5001/login";
-    const signup_url = "http://localhost:5001/signup";
+    const login_url = "https://backend-proj-kgy6.onrender.com/login";
+    const signup_url = "https://backend-proj-kgy6.onrender.com/signup";
 
     async function login(event) {
         event.preventDefault();
