@@ -1,0 +1,214 @@
+.cart-header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    background-color: #b89b52;
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 160px;
+    height: 80px;
+    background: url("../static/icons/iman-caffe-high-resolution-logo.png") no-repeat center center/contain;
+}
+
+
+.nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-bar ul li {
+    display: inline-block;
+}
+
+.nav-bar ul li a {
+    color: #293040;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-bar ul li a:hover {
+    background: rgba(213, 178, 99, 0.1);
+    color: #d5b263;
+    box-shadow: 0px 2px 5px rgba(213, 178, 99, 0.3);
+    transform: scale(1.05);
+}
+
+.cart-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #293040;
+}
+
+.cart-container {
+    width: 55%;
+    padding: 20px;
+}
+
+.cart-container h2 {
+    color: #293040;
+}
+
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease-in-out;
+}
+
+.cart-item:hover {
+    transform: scale(1.02);
+}
+
+
+.cart-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.cart-item-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cart-item-info h4 {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+}
+
+.cart-item-info p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+
+.cart-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.cart-actions button {
+    background-color: #d5b263;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.cart-actions button:hover {
+    background-color: #b89b52;
+    transform: scale(1.1);
+}
+
+
+.payment-section {
+    width: 30%;
+    background: white;
+    padding: 25px;
+    margin-right: 20px;
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    height: fit-content;
+    align-self: flex-start;
+}
+
+.payment-section h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #293040;
+}
+
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-form label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.payment-form input {
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.checkout-button {
+    background-color: #d5b263;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.checkout-button:hover {
+    background-color: #b89b52;
+    transform: scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .cart-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-container {
+        width: 100%;
+    }
+
+    .payment-section {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
